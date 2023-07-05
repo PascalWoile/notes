@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <link rel="shortcut icon" href="./img/lightbulb-yellow.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="renderNotes('active')">
+    <div id="page-container">
+      <div id="content-wrap">
+    <header>
+      <div id="headline-container">
+        <img src="./img/lightbulb-regular.svg" alt="Notizicon" />
+        <h1>Notizen</h1>
+      </div>
+    </header>
+    <nav>
+      <div onclick="renderNotes('active')" class="nav-icons">
+        <img src="./img/note-sticky-regular.svg" alt="Notizen" />
+        <span>Notizen</span>
+      </div>
+      <div onclick="renderNotes('archived')" class="nav-icons">
+        <img src="./img/box-archive-solid.svg" alt="Archiv" />
+        <span>Archiv</span>
+      </div>
+      <div onclick="renderNotes('deleted')" class="nav-icons">
+        <img src="./img/trash-can-regular.svg" alt="Papierkorb" />
+        <span>Papierkorb</span>
+      </div>
+    </nav>
+    <main>
+      <div id="user-input">
+        <div id="input-container">
+          <input id="newTitle" type="text" placeholder="Titel..."/>
+          <textarea id="newContent" name="" id="" cols="30" rows="5" placeholder="Notiz eingeben..."></textarea>
+        </div>
+        <div onclick="addNote()" id="input-icon-container">
+          <div id="noteButton-container">
+            <img src="./img/thumbtack-solid.svg" alt="Pinnadel" />
+            <span>NOTIZ ANHEFTEN</span>
+          </div>
+        </div>
+      </div>
+      <div id="noteField">
+
+      </div>
+    </main>
+  </div>
+    <footer>The icons are provided by <a href="https://fontawesome.com/" rel="nofollow" target="_blank">FontAwesome</a> under the <a href="https://fontawesome.com/license" target="_blank" rel="nofollow">Creative Commons Attribution 4.0 International license</a>.</footer>
+  </div>
+  </body>
+</html>
